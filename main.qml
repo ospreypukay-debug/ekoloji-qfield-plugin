@@ -52,7 +52,7 @@ Item {
     // ----------------------------------------------------------------
     Rectangle {
         id: btnRenkDegistir
-        visible: root.digitizingActive
+        visible: root.digitizingActivevisible: true
         width:  80
         height: 80
         radius: 40

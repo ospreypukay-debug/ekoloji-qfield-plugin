@@ -4,5 +4,5 @@ version: 1.0.0
 author: Ekoloji
 icon: icon.svg
 mainComponent: main.qml
-qfieldMinimumVersion: 3.0.0
 type: dashboard
+qfieldMinimumVersion: 3.0.0

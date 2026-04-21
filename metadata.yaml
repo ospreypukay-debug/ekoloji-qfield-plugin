@@ -1,0 +1,7 @@
+name: Ekoloji Cizim
+description: Tablet stylus için büyük onay ve geri al butonları
+version: 1.0.0
+author: Ekoloji
+icon: icon.svg
+mainComponent: main.qml
+qfieldMinimumVersion: 3.0.0

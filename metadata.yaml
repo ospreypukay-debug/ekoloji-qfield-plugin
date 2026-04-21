@@ -5,3 +5,4 @@ author: Ekoloji
 icon: icon.svg
 mainComponent: main.qml
 qfieldMinimumVersion: 3.0.0
+type: dashboard

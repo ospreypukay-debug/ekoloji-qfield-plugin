@@ -1,7 +1,7 @@
-name: Ekoloji_Cizim
-description: Tablet stylus için büyük onay ve geri al butonları
+name: Kullanici Bilgisi
+description: Basit bir kullanici butonu eklentisi
 version: 1.0.0
-author: Ekoloji
+author: Yakup Sasmaz
 icon: icon.svg
 mainComponent: main.qml
 type: dashboard

@@ -47,7 +47,52 @@ Item {
         function onDigitizingSessionStopped()  { root.digitizingActive = false }
         function onDigitizingSessionFinished() { root.digitizingActive = false }
     }
+// ----------------------------------------------------------------
+    // 🎨 RENK DEĞİŞTİR butonu – Diğer butonların yanına ekle
+    // ----------------------------------------------------------------
+    Rectangle {
+        id: btnRenkDegistir
+        visible: root.digitizingActive
+        width:  80
+        height: 80
+        radius: 40
+        anchors.left:   btnOnayla.right
+        anchors.bottom: btnOnayla.bottom
+        anchors.leftMargin: 12
 
+        color: colorArea.pressed ? "#1976D2" : "#2196F3"
+        border.color: "#0D47A1"
+        border.width: 2
+
+        Column {
+            anchors.centerIn: parent
+            Text {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "🎨"
+                font.pixelSize: 28
+            }
+            Text {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "RENK"
+                font.pixelSize: 10
+                font.bold: true
+                color: "white"
+            }
+        }
+
+        MouseArea {
+            id: colorArea
+            anchors.fill: parent
+            onClicked: {
+                // QField çizim katmanının stilini geçici olarak değiştirir
+                if (iface && iface.activeLayer) {
+                    // Örnek: Çizgiyi fosforlu sarı veya kırmızı yapar
+                    iface.activeLayer.renderer().symbol().setColor(Qt.rgba(1, 0, 0, 1)) // Kırmızı
+                    iface.activeLayer.triggerRepaint()
+                }
+            }
+        }
+    }
     // ----------------------------------------------------------------
     // ✓ ONAYLA butonu – sol alt, büyük ve parmak/stylus dostu
     // ----------------------------------------------------------------
